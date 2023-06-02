@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Hover Effect Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- new header -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Your Website Title</title>
+    <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- header end new -->
+    <!-- new header -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* header new */
+        /* Custom CSS Styles */
+        .navbar-nav .nav-link {
+            margin-right: 12px;
+            font-size: 20px;
+        }
+
+        .navbar {
+            padding: 5px 16px;
+            line-height: 30px;
+        }
+
+        .navbar img {
+            height: 120px;
+        }
+
+        /* Custom CSS Styles */
+        .navbar {
+            border: 1px solid #ffffff;
+            /* Add border to the navbar */
+            border-radius: 6px;
+            /* Optional: Add border radius for a rounded appearance */
+        }
+
+        .navbar-nav li a {
+            /* color: white; */
+            transition: white 0.1s ease;
+            border-radius: 0px;
+            padding: 5px 10px;
+        }
+
+        .navbar-nav li a {}
+
+        .navbar {
+            background-color: #0c1735e5;
+        }
+
+
+
+        .navbar .navbar-nav .nav-link:hover {
+            background-color: #ffffff;
+            /* Change the background color on hover */
+            color: #000000;
+            border-radius: 10px;
+            /* Change the text color on hover */
+        }
+
+        .navbar .navbar-nav .nav-link {
+            color: white;
+        }
+
+        .form-inline .btn {
+            /* width: 120; */
+            padding: 10px;
+
+
+        }
+
+        .btnget button {
+            width: 140px;
+            margin-right: 10px;
+            color: rgb(0, 0, 0);
+            background-color: #fff;
+        }
+
+        .btnget button:active {
+            background-color: #ffffff;
+            color: #000000;
+            text-decoration: olivedrab;
+        }
+
+
+
+
+        /* heder end */
+
+
+
+
+        .footer-left h3 img {
+            height: 120px;
+        }
+
+        /* Custom CSS Styles */
+        .footer-left h3 img {
+            border: 1px solid #ffffff;
+            /* Add border to the navbar */
+            border-radius: 6px;
+            /* Optional: Add border radius for a rounded appearance */
+        }
+
+        .footer-left h3 {
+            padding: 5px 16px;
+            line-height: 30px;
+        }
+
+
+
+
+
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            width: 410px;
+            /* Adjust the desired width of the container */
+            height: 340px;
+            /* Adjust the desired height of the container */
+            overflow: hidden;
+            border-radius: 10%;
+        }
+
+        .image-container:hover .image-overlay {
+            bottom: 50%;
+            transform: translateY(50%);
+        }
+
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 35%;
+            background-color: rgba(0, 0, 0, 0.918);
+            opacity: 0.8;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: bottom 0.3s ease, transform 0.3s ease;
+        }
+
+        .image-text {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .flex_box {
+            justify-content: space-between;
+        }
+
+        #main {
+            /* padding: 10px; */
+            /* padding: 80px; */
+            overflow: hidden;
+        }
+
+        .text {
+            text-align: center;
+            padding: 10px;
+
+        }
+
+        .covimg img {
+
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        .d-inline-flex {
+            display: inline-flex !important;
+        }
+
+        .text-primary {
+            color: #FFC600 !important;
+        }
+
+        .mr-2,
+        .mx-2 {
+            margin-right: 0.5rem !important;
+        }
+
+        .h-100 {
+            height: 100% !important;
+        }
+
+
+
+        .img-text {
+
+            background-image: url(img/cover1.png);
+            background-size: cover;
+            background-position: center;
+            height: 70%;
+            z-index: 1;
+
+        }
+
+        .img-text h1 {
+            text-align: center;
+            text-align: center;
+            padding: 100px;
+            text-align: center;
+            justify-content: center;
+
+            color: rgb(236, 235, 235);
+
+        }
+
+
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .navbar img {
+                height: 80px;
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 16px;
+            }
+
+            .navbar-toggler {
+                background-color: white;
+            }
+
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .navbar img {
+                height: 80px;
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 16px;
+            }
+
+            .navbar-toggler {
+                background-color: white;
+            }
+
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .navbar img {
+                height: 100px;
+            }
+
+            .navbar-nav .nav-link {
+                font-size: 18px;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        /* ------------footer ---------*/
+        footer {
+            position: fixed;
+            bottom: 0;
+        }
+
+        @media (max-height:800px) {
+            footer {
+                position: static;
+            }
+
+            header {
+                padding-top: 40px;
+            }
+        }
+
+        .footer-distributed {
+            background-color: #0c1735;
+            box-sizing: border-box;
+            width: 100%;
+            text-align: left;
+            font: bold 16px sans-serif;
+            padding: 50px 50px 60px 50px;
+            margin-top: 80px;
+        }
+
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-center,
+        .footer-distributed .footer-right {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        /* Footer left */
+
+        .footer-distributed .footer-left {
+            width: 30%;
+        }
+
+        .footer-distributed h3 {
+            color: #ffffff;
+            font: normal 36px 'Cookie', cursive;
+            margin: 0;
+        }
+
+
+        .footer-distributed h3 span {
+            color: #e0ac1c;
+        }
+
+        /* Footer links */
+
+        .footer-distributed .footer-links {
+            color: #ffffff;
+            margin: 20px 0 12px;
+        }
+
+        .footer-distributed .footer-links a {
+            display: inline-block;
+            line-height: 1.8;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .footer-distributed .footer-company-name {
+            color: #8f9296;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        /* Footer Center */
+
+        .footer-distributed .footer-center {
+            width: 35%;
+        }
+
+        .footer-distributed .footer-center .d-inline-flex i {
+            background-color: transparent;
+            color: white;
+            font-size: 25px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 42px;
+            margin: 10px 15px;
+            vertical-align: middle;
+        }
+
+        .footer-distributed .footer-center .d-inline-flex i:hover {
+            color: orange;
+        }
+
+        .footer-distributed .footer-center .num-email i {
+            color: silver;
+            padding: 10px;
+        }
+
+        .footer-distributed .footer-center .num-email p:hover {
+            color: orange;
+        }
+
+        .footer-distributed .footer-center .num-email p a {
+            color: white;
+        }
+
+        .footer-distributed .footer-center .num-email p a:hover {
+            color: orange;
+        }
+
+        .footer-distributed .footer-center i.fa-envelope {
+            font-size: 17px;
+            line-height: 38px;
+        }
+
+        .footer-distributed .footer-center p {
+            display: inline-block;
+            color: #ffffff;
+            vertical-align: middle;
+            margin: 0;
+        }
+
+        .footer-distributed .footer-center p span {
+            display: block;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .footer-distributed .footer-center p a {
+            color: #e0ac1c;
+            text-decoration: none;
+            ;
+        }
+
+        /* Footer Right */
+
+        .footer-distributed .footer-right {
+            width: 30%;
+        }
+
+        .footer-distributed .footer-company-about {
+            line-height: 20px;
+            color: #92999f;
+            font-size: 13px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .footer-distributed .footer-company-about span {
+            display: block;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .footer-distributed .footer-icons {
+            margin-top: 25px;
+        }
+
+        .footer-distributed .footer-icons a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            background-color: #33383b;
+            border-radius: 2px;
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 35px;
+            margin-right: 3px;
+            margin-bottom: 5px;
+        }
+
+        .footer-distributed .footer-icons a:hover {
+            background-color: #3F71EA;
+        }
+
+        .footer-links a:hover {
+            color: #3F71EA;
+        }
+
+        @media (max-width: 880px) {
+
+            .footer-distributed .footer-left,
+            .footer-distributed .footer-center,
+            .footer-distributed .footer-right {
+                display: block;
+                width: 100%;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+
+            .footer-distributed .footer-center i {
+                margin-left: 0;
+            }
+        }
+
+        .footer-heading img {
+
+            height: 160px;
+            width: 150px;
+        }
+
+        .row1 {
+
+            background-color: #0c1735;
+            line-height: 1;
+        }
+
+        @media (max-width: 768px) {
+            /* CSS styles for screens up to 768px wide (e.g., mobile devices) */
+            /* Update your CSS rules here for mobile layout */
+        }
+
+        @media (min-width: 769px) and (max-width: 992px) {
+            /* CSS styles for screens between 769px and 992px wide (e.g., tablets) */
+            /* Update your CSS rules here for tablet layout */
+        }
+
+        @media (min-width: 993px) {
+            /* CSS styles for screens larger than 992px wide (e.g., desktops) */
+            /* Update your CSS rules here for desktop layout */
+        }
+
+        .map-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%;
+            /* 16:9 aspect ratio (divide the height by width and multiply by 100) */
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Adjust the size of the map container based on the device screen width */
+        @media (max-width: 767px) {
+            .map-container {
+                padding-top: 75%;
+                /* Adjust the aspect ratio for smaller screens if needed */
+            }
+        }
+
+
+        /* ------footer ned -------------- */
+    </style>
+</head>
+
+<body>
+    <!-- new header start -->
+    <nav class="navbar navbar-expand-lg  ">
+
+        <img class="ml-3" style="border-radius: 10px;" src="img/loboheader.png" alt="header">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse  flex-column  pb-3  " id="navbarSupportedContent">
+            <div class="d-inline-flex align-content-center  pl-lg-5 pr-xl-5 m-3">
+
+                <a class="nav-link mr-5 text-white" href=""><i class="fa-solid fa-envelope"
+                        style="color: #ffffff; padding: 10px;"></i>
+                    ms.aluminium.fixing@gmail.com
+                </a>
+                <a class="nav-link text-white" href="#"><i class="fa-sharp fa-solid fa-phone-volume"
+                        style="color: #ffffff; padding: 10px;"></i>94739829479439</a>
+
+            </div>
+            <ul class="navbar-nav   pl-5 pr-5">
+                <li class="nav-item active mr-5">
+                    <a class="nav-link " href="home.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item mr-5">
+                    <a class="nav-link " href="about.html">About Us</a>
+                </li>
+                <li class="nav-item  mr-5">
+                    <a class="nav-link " href="our_products.html">
+                        Our Product
+                    </a>
+                </li>
+                <li class="nav-item  mr-5">
+                    <a class="nav-link " href="Gallary.html">
+                        Gallery
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="contact_us_af.html">
+                        Contact Us
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="btnget">
+
+            <button class="btn  text-center" type="submit">Get a Quote</button>
+        </div>
+    </nav>
+    <script type="text/javascript" src="https://example.com/fontawesome/v6.4.0/js/conflict-detection.js">
+    </script>
+
+    <!-- new header end -->
+
+    <div class="img-text">
+        <h1>Our Products</h1>
+    </div>
+
+
+
+    <div id="main">
+        <div class="text">
+
+            <h1>What We <span style="color: rgb(180, 127, 62);">Do</span> </h1>
+            <p class="pt-3">One of the key participants in the fabrication of aluminum for all types of structures and
+                organizations
+                is MS Aluminum. We fully commit our knowledge to achieving excellent customer satisfaction and
+                high-quality projects. We have a skilled technical team and cutting-edge tools to support creating the
+                clients' needs in the most efficient and effective manners.</p>
+        </div>
+
+        <div class="flex_box d-flex pt-5">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="image-container">
+                    <img src="img/glass partition.png" alt="Image" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="image-overlay">
+                      <div class="image-text">
+                        <h3>Glass Partition</h3>
+                        <p>Glass partitions and walls create elegant and clean sightline.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="image-container">
+                    <img src="img/folding doors.png" alt="Image" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="image-overlay">
+                      <div class="image-text">
+                        <h3>Folding Doors</h3>
+                        <p>We have a specialist team in all types of folding doors.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="image-container">
+                    <img src="img/glass railing.png" alt="Image" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="image-overlay">
+                      <div class="image-text">
+                        <h3>Glass Railing</h3>
+                        <p>Glass Railing create elegant and clean sightline.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+            <div class="flex_box d-flex pt-5">
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <div class="image-container">
+                      <img src="img/aluminium_windows.png" alt="Image" style="width: 100%; height: 100%; object-fit: cover;">
+                      <div class="image-overlay">
+                        <div class="image-text">
+                          <h3>Aluminum Windows</h3>
+                          <p>We are pioneers in the provision and setup of all types of windows.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <div class="image-container">
+                      <img src="img/aluminium_doors.png" alt="Image" style="width: 100%; height: 100%; object-fit: cover;">
+                      <div class="image-overlay">
+                        <div class="image-text">
+                          <h3>Aluminium Doors</h3>
+                          <p>We have a specialized panel of workers for the installation and fixing.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <div class="image-container">
+                      <img src="img/aluminium_doors_1.png" alt="Image" style="width: 100%; height: 100%; object-fit: cover;">
+                      <div class="image-overlay">
+                        <div class="image-text">
+                          <h3>Automation Door</h3>
+                          <p>Doors to windows, UPVC Doors, cast aluminum handrail, and much more under one roof.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="flex_box d-flex pt-5">
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <div class="image-container">
+                      <img src="img/glass_aluminium.png" alt="Image" style="width: 100%; height: 100%; object-fit: cover;">
+                      <div class="image-overlay">
+                        <div class="image-text">
+                          <h3>Glass Aluminum</h3>
+                          <p>We have a specialized panel of workers to contribute with spectacular designs.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <div class="image-container">
+                      <img src="img/ss_work.png" alt="Image" style="width: 100%; height: 100%; object-fit: cover;">
+                      <div class="image-overlay">
+                        <div class="image-text">
+                          <h3>SS Works</h3>
+                          <p>We have a specialist team in all types of stainless steel fabrication works.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <div class="image-container">
+                      <img src="img/glass_room.png" alt="Image" style="width: 100%; height: 100%; object-fit: cover;">
+                      <div class="image-overlay">
+                        <div class="image-text">
+                          <h3>Glass Room</h3>
+                          <p>We have a specialized panel of workers for Glass Room</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="flex_box d-flex pt-5">
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <div class="image-container">
+                      <img src="img/glass_shower.png" alt="Image" style="width: 100%; height: 100%; object-fit: cover;">
+                      <div class="image-overlay">
+                        <div class="image-text">
+                          <h3>Glass Showers</h3>
+                          <p>We have a specialist team in all types of Glass Showers.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <div class="image-container">
+                      <img src="img/aluminium_gates.png" alt="Image" style="width: 100%; height: 100%; object-fit: cover;">
+                      <div class="image-overlay">
+                        <div class="image-text">
+                          <h3>Cast Aluminum Gates</h3>
+                          <p>We cater to a wide array of cast aluminum gates to commercial and residential establishments.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <div class="image-container">
+                      <img src="img/repair.png" alt="Image" style="width: 100%; height: 100%; object-fit: cover;">
+                      <div class="image-overlay">
+                        <div class="image-text">
+                          <h3>Repair and Maintenance</h3>
+                          <p>We always keep track of client satisfaction with extensive services in the repair and maintenance
+                            industry.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    </div>
+    <!-- .................footer start.................... -->
+
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <h3 class="footer-heading">
+                <img src="img/loboheader.png">
+            </h3>
+
+            <p class="footer-links">
+                <a href="home.html">Home</a>
+                |
+                <a href="about.html">About Us</a>
+                |
+                <a href="Gallary.html">Gallery</a>
+                |
+                <a href="our_products.html">Our Products</a>
+                |
+                <a href="contact_us_af.html">Contact Us</a>
+            </p>
+
+            <p class="footer-company-name"><strong>MS ALUMINIUM FIXING.</strong> All Rights Reserved. Designed by D-Zone
+                All rights reserved</p>
+        </div>
+
+        <div class="footer-center p-1">
+
+            <div class="num-email pl-3">
+
+                <div>
+                    <h4 style="color: white; margin: 10px; text-align: justify ;">Contact Info</h4>
+                    <i class="fa fa-phone-alt "></i>
+                    <p><a href="tel:+971586671875">+971 58667-1875</a></p>
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:ms.aluminium.fixing@gmail.com">ms.aluminium.fixing@gmail.com</a></p>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="align-items-center pt-2  pl-4" style="color: white   ; margin: 10px; text-align: justify;">
+                    Follow Us</h4>
+                <div class="d-inline-flex align-items-center pt-2">
+                    <a class="text-primary p-0" href="">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-primary p-0" href="">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-primary p-0" href="">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="text-primary p-0" href="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-right">
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.8847318307176!2d55.30642281012135!3d25.274462728475207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4300a1409195%3A0x7876f1cfd5e683!2sMS%20Aluminium%20Fixing!5e0!3m2!1sen!2sin!4v1685022460504!5m2!1sen!2sin"
+                width="auto" height="300" style="border:1 0 1;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+    <!-- script in bootstrap -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 2000, // Adjust the delay between slides (in milliseconds)
+            },
+        });
+    </script>
+    <!-- end script -->
+
+    <!----------------- script------- -->
+
+
+    <style>
+        .searchwp-live-search-results {
+            opacity: 0;
+            transition: opacity .25s ease-in-out;
+            -moz-transition: opacity .25s ease-in-out;
+            -webkit-transition: opacity .25s ease-in-out;
+            height: 0;
+            overflow: hidden;
+            z-index: 9999995;
+            /* Exceed SearchWP Modal Search Form overlay. */
+            position: absolute;
+            display: none;
+        }
+
+        .searchwp-live-search-results-showing {
+            display: block;
+            opacity: 1;
+            height: auto;
+            overflow: auto;
+        }
+
+        .searchwp-live-search-no-results {
+            padding: 3em 2em 0;
+            text-align: center;
+        }
+
+        .searchwp-live-search-no-min-chars:after {
+            content: "Continue typing";
+            display: block;
+            text-align: center;
+            padding: 2em 2em 0;
+        }
+    </style>
+    <script>
+        var _SEARCHWP_LIVE_AJAX_SEARCH_BLOCKS = true;
+        var _SEARCHWP_LIVE_AJAX_SEARCH_ENGINE = 'default';
+        var _SEARCHWP_LIVE_AJAX_SEARCH_CONFIG = 'default';
+    </script>
+    <script type="text/javascript"
+        src="https://www.alcam.com.tr/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.7.5.1"
+        id="swv-js"></script>
+    <script type="text/javascript" id="contact-form-7-js-extra">
+        /* <![CDATA[ */
+        var wpcf7 = { "api": { "root": "https:\/\/www.alcam.com.tr\/wp-json\/", "namespace": "contact-form-7\/v1" } };
+/* ]]> */
+    </script>
+    <script type="text/javascript"
+        src="https://www.alcam.com.tr/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.7.5.1"
+        id="contact-form-7-js"></script>
+    <script type="text/javascript" id="swp-live-search-client-js-extra">
+        /* <![CDATA[ */
+        var searchwp_live_search_params = [];
+        searchwp_live_search_params = { "ajaxurl": "https:\/\/www.alcam.com.tr\/wp-admin\/admin-ajax.php", "origin_id": 5, "config": { "default": { "engine": "default", "input": { "delay": 300, "min_chars": 3 }, "results": { "position": "bottom", "width": "auto", "offset": { "x": 0, "y": 5 } }, "spinner": { "lines": 12, "length": 8, "width": 3, "radius": 8, "scale": 1, "corners": 1, "color": "#424242", "fadeColor": "transparent", "speed": 1, "rotate": 0, "animation": "searchwp-spinner-line-fade-quick", "direction": 1, "zIndex": 2000000000, "className": "spinner", "top": "50%", "left": "50%", "shadow": "0 0 1px transparent", "position": "absolute" } } }, "msg_no_config_found": "No valid SearchWP Live Search configuration found!", "aria_instructions": "When autocomplete results are available use up and down arrows to review and enter to go to the desired page. Touch device users, explore by touch or with swipe gestures." };;
+/* ]]> */
+    </script>
+    <script type="text/javascript"
+        src="https://www.alcam.com.tr/wp-content/plugins/searchwp-live-ajax-search/assets/javascript/dist/script.min.js?ver=1.7.4"
+        id="swp-live-search-client-js"></script>
+    <script type="text/javascript"
+        src="https://www.google.com/recaptcha/api.js?render=6LdvHJQeAAAAAOR_eRIgjFa1S18ZUcoYaxvwRIkz&amp;ver=3.0"
+        id="google-recaptcha-js"></script>
+    <script type="text/javascript"
+        src="https://www.alcam.com.tr/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2"
+        id="wp-polyfill-inert-js"></script>
+    <script type="text/javascript"
+        src="https://www.alcam.com.tr/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.11"
+        id="regenerator-runtime-js"></script>
+    <script type="text/javascript"
+        src="https://www.alcam.com.tr/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0"
+        id="wp-polyfill-js"></script>
+    <script type="text/javascript" id="wpcf7-recaptcha-js-extra">
+        /* <![CDATA[ */
+        var wpcf7_recaptcha = { "sitekey": "6LdvHJQeAAAAAOR_eRIgjFa1S18ZUcoYaxvwRIkz", "actions": { "homepage": "homepage", "contactform": "contactform" } };
+/* ]]> */
+    </script>
+    <script type="text/javascript"
+        src="https://www.alcam.com.tr/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=5.7.5.1"
+        id="wpcf7-recaptcha-js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-5T62NP66F7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-5T62NP66F7');
+    </script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(87596650, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/87596650" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KSRKW5Q');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSRKW5Q" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // Initialize the map when the page has loaded
+        window.addEventListener('load', function () {
+            initMap();
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+    <!--------------- Product Gallery --------- -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+    <!-- -------end product gallary -->
+
+
+    <!-- Footer End -->
+
+
+
+</body>
+
+</html>
